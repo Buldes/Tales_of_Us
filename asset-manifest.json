@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tales_of_us/static/css/main.964fdded.css",
-    "main.js": "/tales_of_us/static/js/main.8d2f13f4.js",
-    "static/js/453.d7061878.chunk.js": "/tales_of_us/static/js/453.d7061878.chunk.js",
-    "index.html": "/tales_of_us/index.html",
-    "main.964fdded.css.map": "/tales_of_us/static/css/main.964fdded.css.map",
-    "main.8d2f13f4.js.map": "/tales_of_us/static/js/main.8d2f13f4.js.map",
-    "453.d7061878.chunk.js.map": "/tales_of_us/static/js/453.d7061878.chunk.js.map"
+    "main.css": "/Tales_of_Us/static/css/main.964fdded.css",
+    "main.js": "/Tales_of_Us/static/js/main.17c6a616.js",
+    "static/js/453.d7061878.chunk.js": "/Tales_of_Us/static/js/453.d7061878.chunk.js",
+    "index.html": "/Tales_of_Us/index.html",
+    "main.964fdded.css.map": "/Tales_of_Us/static/css/main.964fdded.css.map",
+    "main.17c6a616.js.map": "/Tales_of_Us/static/js/main.17c6a616.js.map",
+    "453.d7061878.chunk.js.map": "/Tales_of_Us/static/js/453.d7061878.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.8d2f13f4.js"
+    "static/js/main.17c6a616.js"
   ]
 }
