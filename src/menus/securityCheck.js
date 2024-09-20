@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faCircleDot } from "@fortawesome/free-regular-svg-icons";
 import { securityCheck } from "../functions/securityCheck";
+import { SavePassword } from "../functions/passwordManager";
+import { hash } from "../functions/convertToHash";
 
-export function SecurityPage(setSecuritySucess){
+export function SecurityPage(props){
 
     const [inputPass, setInputPass] = useState("")
     const [rememberPassword, setRememberPassword] = useState(false)
@@ -12,28 +14,41 @@ export function SecurityPage(setSecuritySucess){
 
     useEffect(() => {
         if (unlockPress){
-            securityCheck(inputPass, (e) => setSecurityCheckResponse(e)).then(()=>{
+            securityCheck(inputPass, (e) => setSecurityCheckResponse(e)).then(async ()=>{
                 if (securityCheckResponse !== null){
 
-                    if (!securityCheckResponse){
+                    if (securityCheckResponse === false){ // password incorrect
                         document.getElementById("hintText").textContent = "Falsche Eingabe..."
                         document.getElementById("hintText").style.color = "#ff0000"
                         document.getElementById("passI").style.borderColor = "#ff0000"
 
                         setUnlockPress(false)
                         setSecurityCheckResponse(null)
+                        props.setSecuritySucess(false)
                     }
 
-                    else{
+                    else if (securityCheckResponse === true){ // password correct
                         document.getElementById("hintText").textContent = "Passwort korrekt. Bitte warten..."
                         document.getElementById("hintText").style.color = "#00ff00"
                         document.getElementById("passI").style.borderColor = "#00ff00"
+
+                        await hash(inputPass).then((res) => {
+                            if (rememberPassword) SavePassword(res)
+                            props.setSecPass(res)
+                        })
+
+                        setTimeout(() => props.setSecuritySucess(true), 500)
+                    }
+                    else{ // securityCheckResponse is null => not finish checking
+                        document.getElementById("hintText").textContent = "Überprüfe..."
+                        document.getElementById("hintText").style.color = "white"
+                        document.getElementById("passI").style.borderColor = "black"
                     }
 
                 }
             })
         }
-    }, [unlockPress, inputPass, securityCheckResponse])
+    }, [unlockPress, inputPass, securityCheckResponse, rememberPassword, props])
 
     return(
     <div className="SecurityCheck">
@@ -42,7 +57,7 @@ export function SecurityPage(setSecuritySucess){
         
         <div className="parant">
 
-            <label className="message">Passwort eingeben</label>
+            <label className="message">Passwort eingeben {securityCheckResponse}</label>
 
             <input id="passI" disabled={unlockPress} value={inputPass} onChange={(e) => setInputPass(e.target.value)} type="password" placeholder=""></input>
 

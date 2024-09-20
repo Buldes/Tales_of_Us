@@ -2,32 +2,45 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import key from "./data/key.json"
 import { SecurityPage } from './menus/securityCheck';
+import { LoadingScreen } from './components/loadingScreen';
+import { CheckForSavedPassword } from './functions/passwordManager';
+import { ChooseTypePrivacy } from './menus/chooseTypMenu';
+import { LoadData } from './functions/dataControll';
+import { MainPage } from './menus/mainPage';
 
 
 function App() 
 {
-  const [keyDataLoaded, setKeyDataLoaded] = useState(false)
-  const [securitySucess, setSecuritySucess] = useState(false)
+  const [secPass, setSecPass] = useState(null)
 
-  function LoadKeyData(){
-    const data = JSON.stringify(key, null, 2)
-    setKeyDataLoaded(true)
-  }
+  const [securitySucess, setSecuritySucess] = useState(null)
+  const [dataLoaded, setDataLoaded] = useState(false)
+  const [mode, setMode] = useState(null)
+  const [data, setData] = useState(null)
 
   useEffect(() => {
-    LoadKeyData()
-  })
+    if (securitySucess === null){
+      CheckForSavedPassword((e) => setSecPass(e), (res) => setSecuritySucess(res))
+    }
+  }, [securitySucess, secPass])
 
-  if (!keyDataLoaded){
-    return(
-      <div className="LoadinPage">
-        <header className="Loading...">
-        </header>
-        <label>Loading... Please Wait.</label>
-      </div>
-    )
+  if (/*!isMobile ||*/ securitySucess === null){ 
+    return <LoadingScreen text={"Bitte warten..."}/>
   }
-  return <SecurityPage/>
+  else if (!securitySucess){
+    return <SecurityPage setSecuritySucess={(e) => setSecuritySucess(e)} setSecPass={(e) => setSecPass(e)}/>
+  }
+  else if (mode === null){
+    return <ChooseTypePrivacy setSecLevel={setMode}/>
+  }
+  else if (!dataLoaded){
+    LoadData(mode, secPass, (e) => setDataLoaded(e), (e) => setData(e))
+    return <LoadingScreen text={"Lade Daten"}/>
+  }
+  else if (dataLoaded && secPass === key.password){
+    return <MainPage data={data}/>
+  }
+
 }
 
 export default App;
