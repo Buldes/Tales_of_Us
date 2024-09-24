@@ -23,13 +23,13 @@ export function DropDownYear(props){
 
             <div key={"list"} className="dropDownYear" show={JSON.stringify(openDropDown)}>
                 {props.keys.map((item, index) => {
-                    if (props.keys.length <= 1) return <label>Keine daten</label>
                     return (
                         <button disabled={!openDropDown} onClick={() => setSelectedYear(item)} className="dropDownYearButton" key={index}>
                             {selectedYear === item ? <FontAwesomeIcon icon={faCheck} style={{marginRight:"10px"}}/>: ""}
                             {item}
                         </button>)
                 })}
+                <label>Fortsetzung folgt...</label>
             </div>
         </div>
     )

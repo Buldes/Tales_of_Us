@@ -15,8 +15,9 @@ export function ChooseTypePrivacy(props){
 
             <label>Sicherheitslevel</label>
             
-            <button disabled={selectedButton === "privat"} onClick={() => setSelectedButton("parant")}>
-                Eltern
+            <button disabled={selectedButton === "privat"} /*onClick={() => setSelectedButton("parant")}*/ onClick={(e) => e.currentTarget.blur()} style={{color:"grey"}}>
+                Eltern 
+                <label style={{fontSize:15, marginLeft:10, fontFamily:"sans-serif",color:"grey"}}>  [in arbeit...]</label>
             </button>
 
             <button disabled={selectedButton === "parant"} onClick={() => setSelectedButton("privat")}>

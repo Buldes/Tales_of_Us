@@ -342,6 +342,15 @@
   border: 0px;
 }
 
+.dropDownYear label{
+  position: relative;
+  margin-left: 10px;
+  width: calc(100% - 20px);
+  text-align: center;
+  color: white;
+  font-family: "Dancing Script", cursive;
+}
+
 .scrollView{
   position: absolute;
   margin-top: 0px;
