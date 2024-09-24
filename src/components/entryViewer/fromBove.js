@@ -29,7 +29,10 @@ export function EntryViewerNone(props) {
             
             {Object.keys(data.body).map((item) =>{
                 if (item.includes("text")){
-                    return <label className="bodyText" key={item}>{data.body[item]}</label>
+                    return <label fromPerson={JSON.stringify(data.body[item].from !== "none")} className="bodyText" key={item}>
+                                {(data.body[item].from === "none" ? "": '"') + data.body[item].content + (data.body[item].from === "none" ? "": '"')}
+                                <label>{data.body[item].from === "none" ? "": " - " + data.body[item].from}</label>
+                            </label> 
                 }
                 else if (item.includes("picture")){
                     try{
