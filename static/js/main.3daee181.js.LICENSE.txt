@@ -1,3 +1,5 @@
+/*!isMobile  || */
+
 /**
  * @license React
  * react-dom.production.min.js
