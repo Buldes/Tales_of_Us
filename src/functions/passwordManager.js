@@ -2,7 +2,6 @@ import key from "../data/key.json"
 
 export async function CheckForSavedPassword(secPass, vari){
     var res =  localStorage.getItem("pass")
-    console.log(`saved item: ${res}`)
 
     if (res === undefined) {
         vari(false)
@@ -18,6 +17,5 @@ export async function CheckForSavedPassword(secPass, vari){
 }
 
 export function SavePassword(pass){
-    console.log("Saving item: " + pass)
     localStorage.setItem("pass", pass)
 }

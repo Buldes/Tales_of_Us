@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&display=swap');
 
 .App {
   text-align: center;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
 }
 
 /*Loading page*/
@@ -230,7 +237,7 @@
 
 /*Main Page*/
 .MainPageBody{
-  position: absolute; 
+  position: fixed; 
   top: 0; 
   left: 0; 
   height: 100%; 
@@ -242,6 +249,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .navBar{
@@ -249,7 +257,7 @@
   top: 0px;
   z-index: 10;
   width: 100%;
-  height: 50px;
+  height: fit-content;
 
   display: flex;
   flex-direction: column;
@@ -258,10 +266,11 @@
   background-color: transparent;
 }
 
-.navBar button{
+.navBarButton{
   width: calc(100% - 20px);
   margin-top: 10px;
-  height: 100%;
+  height: 50px;
+  min-height: 50px;
 
   background: linear-gradient(rgb(151, 0, 0), rgb(166, 0, 66));
 
@@ -273,12 +282,72 @@
 
   border: 0px;
   border-radius: 10px;
-  box-shadow:  0px 0px 47px 13px rgba(125,0,0,1);;
+  box-shadow:  0px 0px 47px 13px rgba(125,0,0,1);
+
+  z-index: 2;
+}
+
+.dropDownYear{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  width: calc(100% - 20px);
+  border-radius: 20px;
+
+  background: linear-gradient(rgb(151, 0, 0), rgb(166, 0, 66));
+  box-shadow:  0px 0px 10px 1px rgba(125,0,0,1);
+
+  overflow: hidden;
+
+  transition: height 0.5s ease, margin-top 0.5s ease, box-shadow 0.3s ease;
+
+  /*Beinning*/
+  margin-top: -25px;
+  height: 0px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.dropDownYear[show="false"] {
+  margin-top: -25px;
+  height: 0px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.dropDownYear[show="true"] {
+  height: 100%;
+  overflow: scroll;
+  margin-top: 10px;
+  z-index: 0;
+}
+
+.dropDownYearButton{
+  position: relative;
+  width: calc(100% - 20px);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  height: 40px;
+
+  background: transparent;
+
+  color: white;
+  font-size: 25px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+
+  border: 0px;
 }
 
 .scrollView{
+  position: absolute;
+  margin-top: 0px;
   width: 100%;
   height: 100vh;
+  max-height: 100vh;
 
   overflow-y: auto;
 
@@ -286,6 +355,74 @@
   flex-direction: column;
   align-items: center;
 
-  background-color: transparent;
+  background-color: transparent
+}
 
+.placeholder{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/*Entry Viewer*/
+.enryViewerNone{
+  opacity: 0;
+  
+  margin-top: 10px;
+  width: calc(100% - 60px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  border-radius: 20px;
+
+  background: transparent;
+
+}
+
+.enryViewerNone[fadeAway="true"]{
+  opacity: .5;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(50%); }
+  25% { opacity: 0;}
+  100% { opacity: 1; }
+}
+
+.enryViewerNone label{
+  color: white;
+}
+
+.dateLabel{
+  margin-top: 10px;
+  margin-right: 10px;
+  position:relative;
+  float: right;
+
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Teko", sans-serif;
+}
+
+.headlineViewerNone{
+  font-family: "Playwrite CU", cursive;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.enryViewerNone img{
+  margin-top: 5px;
+  border-radius: 20px;
+  width:calc(100% - 40px);
+}
+
+.bodyText{
+  margin-left: 10px;
+  margin-right: 10px;
+
+  font-size: 15px;
+  font-family: "Playwrite AU TAS", cursive;
+  font-weight: 400;
 }

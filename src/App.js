@@ -7,6 +7,7 @@ import { CheckForSavedPassword } from './functions/passwordManager';
 import { ChooseTypePrivacy } from './menus/chooseTypMenu';
 import { LoadData } from './functions/dataControll';
 import { MainPage } from './menus/mainPage';
+import { isMobile } from 'react-device-detect';
 
 
 function App() 
@@ -24,7 +25,7 @@ function App()
     }
   }, [securitySucess, secPass])
 
-  if (/*!isMobile ||*/ securitySucess === null){ 
+  if (/*!isMobile  || */securitySucess === null){ 
     return <LoadingScreen text={"Bitte warten..."}/>
   }
   else if (!securitySucess){
