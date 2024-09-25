@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Tales_of_Us/static/css/main.ce643eb1.css",
-    "main.js": "/Tales_of_Us/static/js/main.2063b9b6.js",
+    "main.js": "/Tales_of_Us/static/js/main.03059dc8.js",
     "static/js/453.d7061878.chunk.js": "/Tales_of_Us/static/js/453.d7061878.chunk.js",
     "static/media/feuerZelten.jpg": "/Tales_of_Us/static/media/feuerZelten.ad794300ab441bddd01d.jpg",
     "static/media/muschelKette.jpg": "/Tales_of_Us/static/media/muschelKette.323049269a24ae84bf3b.jpg",
@@ -9,13 +9,14 @@
     "static/media/firstDateAsking.jpg": "/Tales_of_Us/static/media/firstDateAsking.11a39213554498e7977e.jpg",
     "static/media/placeholder.png": "/Tales_of_Us/static/media/placeholder.84a0e23ce5999b372f26.png",
     "static/media/firstMesssage.png": "/Tales_of_Us/static/media/firstMesssage.7c81de892de6dbe4857b.png",
+    "static/media/sebbFeier.jpg": "/Tales_of_Us/static/media/sebbFeier.a9abfbcbb7e24533c2a8.jpg",
     "index.html": "/Tales_of_Us/index.html",
     "main.ce643eb1.css.map": "/Tales_of_Us/static/css/main.ce643eb1.css.map",
-    "main.2063b9b6.js.map": "/Tales_of_Us/static/js/main.2063b9b6.js.map",
+    "main.03059dc8.js.map": "/Tales_of_Us/static/js/main.03059dc8.js.map",
     "453.d7061878.chunk.js.map": "/Tales_of_Us/static/js/453.d7061878.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce643eb1.css",
-    "static/js/main.2063b9b6.js"
+    "static/js/main.03059dc8.js"
   ]
 }
