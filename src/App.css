@@ -446,7 +446,7 @@
   font-weight: 400;
 }
 
-.bodyText[fromPerson=true]{
+.bodyText[fromperson=true]{
   font-family: "Playpen Sans", cursive;
   display: flex;
   flex-direction: column;

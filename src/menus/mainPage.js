@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { DropDownYear } from "../components/chooseYearPopUp";
 import { EntryViewerNone } from "../components/entryViewer/fromBove";
 
@@ -19,7 +19,7 @@ export function MainPage(props){
             }, 10);
         }
     
-        setTimeout((elements) => {
+        setTimeout(() => {
             setYear(newYear); 
             setThisYearData(props.data[newYear]);
 
@@ -33,14 +33,6 @@ export function MainPage(props){
             }
         }, 1000);
     }
-    
-
-    useEffect(() => {
-        console.log(year);
-        console.log(thisYearData);
-        
-        
-    }, [year, thisYearData])
 
     return (
         <div className="MainPageBody">

@@ -25,7 +25,7 @@ function App()
     }
   }, [securitySucess, secPass])
 
-  if (/*!isMobile  || */securitySucess === null){ 
+  if (!isMobile  || securitySucess === null){ 
     return <LoadingScreen text={"Bitte warten..."}/>
   }
   else if (!securitySucess){
