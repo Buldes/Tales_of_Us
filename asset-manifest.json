@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Tales_of_Us/static/css/main.ce643eb1.css",
-    "main.js": "/Tales_of_Us/static/js/main.6356279a.js",
+    "main.js": "/Tales_of_Us/static/js/main.07bda516.js",
     "static/js/453.d7061878.chunk.js": "/Tales_of_Us/static/js/453.d7061878.chunk.js",
     "static/media/feuerZelten.jpg": "/Tales_of_Us/static/media/feuerZelten.ad794300ab441bddd01d.jpg",
     "static/media/muschelKette.jpg": "/Tales_of_Us/static/media/muschelKette.323049269a24ae84bf3b.jpg",
@@ -12,11 +12,11 @@
     "static/media/sebbFeier.jpg": "/Tales_of_Us/static/media/sebbFeier.a9abfbcbb7e24533c2a8.jpg",
     "index.html": "/Tales_of_Us/index.html",
     "main.ce643eb1.css.map": "/Tales_of_Us/static/css/main.ce643eb1.css.map",
-    "main.6356279a.js.map": "/Tales_of_Us/static/js/main.6356279a.js.map",
+    "main.07bda516.js.map": "/Tales_of_Us/static/js/main.07bda516.js.map",
     "453.d7061878.chunk.js.map": "/Tales_of_Us/static/js/453.d7061878.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce643eb1.css",
-    "static/js/main.6356279a.js"
+    "static/js/main.07bda516.js"
   ]
 }
