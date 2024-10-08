@@ -37,7 +37,7 @@ export function MainPage(props){
     return (
         <div className="MainPageBody">
 
-            <DropDownYear keys={Object.keys(props.data).sort().reverse()} setYear={(e) => ChangeYear(e)}/>
+            <DropDownYear passCode={props.passCode} setMode={(e) => props.setMode(e)} keys={Object.keys(props.data).sort().reverse()} setYear={(e) => ChangeYear(e)}/>
 
 
             <div className="scrollView">

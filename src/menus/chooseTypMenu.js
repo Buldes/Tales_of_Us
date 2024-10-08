@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { SaveMenu } from "../functions/savedSettingsManager";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 export function ChooseTypePrivacy(props){
 
@@ -7,22 +10,35 @@ export function ChooseTypePrivacy(props){
     useEffect(() => {
         if (selectedButton !== null){
             setTimeout(() => props.setSecLevel(selectedButton), 1000)
+            props.reloadData(null)
+            SaveMenu(selectedButton)
         }
     }, [selectedButton, props])
 
     return(
-        <div className="choosePrivacyType">
-
-            <label>Sicherheitslevel</label>
+        <div>
             
-            <button disabled={selectedButton === "privat"} /*onClick={() => setSelectedButton("parant")}*/ onClick={(e) => e.currentTarget.blur()} style={{color:"grey"}}>
-                Eltern 
-                <label style={{fontSize:15, marginLeft:10, fontFamily:"sans-serif",color:"grey"}}>  [in arbeit...]</label>
-            </button>
+            <div className="choosePrivacyType">
 
-            <button disabled={selectedButton === "parant"} onClick={() => setSelectedButton("privat")}>
-                Privat
-            </button>
+                <label>Sicherheitslevel</label>
+
+                <button disabled={selectedButton === "privat"} onClick={() => setSelectedButton("parent")}>
+                    Eltern 
+                </button>
+
+                <button disabled={selectedButton === "parent"} onClick={() => setSelectedButton("privat")}>
+                    Privat
+                </button>
+
+            </div>
+
+            <div className="choosePrivacyTypeLogOut">
+
+                <button onClick={() => {setTimeout(() => {localStorage.removeItem("pass"); window.location.reload();}, 750)}}>
+                    <FontAwesomeIcon icon={faRightToBracket} style={{marginRight:10}}/>
+                    Abmelden
+                </button>
+            </div>
 
         </div>
     )

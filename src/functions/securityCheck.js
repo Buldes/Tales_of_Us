@@ -1,5 +1,5 @@
 import keyData from "../data/key.json"
-import { isMobile } from "react-device-detect";
+import { isAndroid } from "react-device-detect";
 import { hash } from "./convertToHash";
 
 export async function securityCheck(input, output){
@@ -7,11 +7,11 @@ export async function securityCheck(input, output){
     await hash(input).then(async (out) => {
         input = out
 
-        if (!isMobile){
+        if (!isAndroid){
             output(false)
             return false
         }
-        else if (input !== keyData.password){
+        else if (input !== keyData.password && input !== keyData.parantPass){
             output(false)
             return false
         }

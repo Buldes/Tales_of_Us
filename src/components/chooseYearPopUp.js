@@ -1,12 +1,13 @@
-import { faCheck, faSort } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesLeft, faCheck, faRightToBracket, faSort } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
+import key from "../data/key.json"
 
 export function DropDownYear(props){
 
     const [openDropDown, setOpenDropDown] = useState(null)
     const [selectedYear, setSelectedYear] = useState(props.keys[0])
-
+    
     useEffect(() => {
         if (openDropDown){
             setOpenDropDown(false)
@@ -30,6 +31,15 @@ export function DropDownYear(props){
                         </button>)
                 })}
                 <label>Fortsetzung folgt...</label>
+                {props.passCode === key.password ? 
+                    <button className="dropDownYearBackToMenu" onClick={() => props.setMode(null)}>
+                        <FontAwesomeIcon icon={faAnglesLeft}/>
+                        Zurück zum Menu
+                    </button>
+                : <button className="dropDownYearBackToMenu" onClick={() => {localStorage.removeItem("pass");window.location.reload();}}>
+                        <FontAwesomeIcon icon={faRightToBracket} style={{marginRight:"10px"}}/>
+                        Abmelden
+                    </button>}
             </div>
         </div>
     )

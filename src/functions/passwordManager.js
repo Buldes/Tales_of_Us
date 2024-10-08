@@ -6,7 +6,7 @@ export async function CheckForSavedPassword(secPass, vari){
     if (res === undefined) {
         vari(false)
     }
-    else if (res !== key.password){
+    else if (res !== key.password && res !== key.parantPass){
         vari(false)
     }
     else {
