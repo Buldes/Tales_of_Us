@@ -24,8 +24,9 @@ function App()
     if (securitySucess === null){
       CheckForSavedPassword((e) => setSecPass(e), (res) => setSecuritySucess(res))
     }
-    else if (securitySucess !== null && mode === null && secPass === key.parantPass){
+    else if (securitySucess !== null && mode !== "parent" && secPass === key.parantPass){
       setMode("parent")
+      SaveMenu("parent")
     }
     else if (securitySucess !== null && secPass === key.password && mode == null){
       SaveMenu(null)
