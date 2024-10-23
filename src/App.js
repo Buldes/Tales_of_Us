@@ -21,6 +21,8 @@ function App()
   const [data, setData] = useState(null)
 
   useEffect(() => {
+    document.title = "Taes of us <3"
+
     if (securitySucess === null){
       CheckForSavedPassword((e) => setSecPass(e), (res) => setSecuritySucess(res))
     }
