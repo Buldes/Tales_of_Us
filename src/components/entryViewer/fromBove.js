@@ -1,6 +1,7 @@
 import { faFileCircleQuestion } from "@fortawesome/free-solid-svg-icons/faFileCircleQuestion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Collection } from "./types/collectionViewer";
 
 export function EntryViewerNone(props) {
     
@@ -43,8 +44,11 @@ export function EntryViewerNone(props) {
                     try{
                         return <img key={item} alt="" src={require(`../../data/picture/${data.body[item]}`)}/>  
                     } catch (e){
-                        return <FontAwesomeIcon icon={faFileCircleQuestion}/> 
+                        return <FontAwesomeIcon key={item + "Error"} icon={faFileCircleQuestion}/> 
                     }
+                }
+                else if (item.includes("collection")){
+                    return <Collection key={item} imgs={data.body[item]}/>
                 }
                 return ""
             })

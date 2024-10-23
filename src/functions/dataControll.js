@@ -2,7 +2,6 @@ import key from "../data/key.json"
 
 export async function LoadData(secLevl, saftyPass, finish, setData){
     if (saftyPass !== key.password && saftyPass !== key.parantPass){
-        console.log("test")
         finish(false)
         return
     }
