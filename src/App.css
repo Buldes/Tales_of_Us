@@ -487,11 +487,10 @@
 }
 
 /*Collection*/
-  .collection{
-    overflow: hidden;
-
-  height: auto;
+.collection{
+  overflow: hidden;
   width: calc(100% - 40px);
+  margin-bottom: 30px;
 
   border-radius: 20px;
   z-index: 2;
@@ -519,9 +518,8 @@
 }
 
 .collection button{
-  position: absolute;
-  top: 50%;
-  left: 20px;
+  position: relative;
+  top:calc(-50% - 35px + 75px);
   z-index: 1;
 
   height: 70px;
@@ -547,9 +545,8 @@
 
 .collection img{
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: -75px;
 
   border-radius: 0px;
   width: 100%;
-  height: 100%;
 }

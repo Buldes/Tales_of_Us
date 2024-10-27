@@ -48,7 +48,7 @@ export function EntryViewerNone(props) {
                     }
                 }
                 else if (item.includes("collection")){
-                    return <Collection key={item} imgs={data.body[item]}/>
+                    return <Collection key={item} idnum={item} imgs={data.body[item]}/>
                 }
                 return ""
             })
