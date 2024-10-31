@@ -2,6 +2,7 @@ import { faFileCircleQuestion } from "@fortawesome/free-solid-svg-icons/faFileCi
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Collection } from "./types/collectionViewer";
+import { Comparison } from "./types/comparisonViewer";
 
 export function EntryViewerNone(props) {
     
@@ -49,6 +50,9 @@ export function EntryViewerNone(props) {
                 }
                 else if (item.includes("collection")){
                     return <Collection key={item} idnum={item} imgs={data.body[item]}/>
+                }
+                else if (item.includes("comparison")){
+                    return <Comparison key={item} idnum={item} data={data.body[item]}/>
                 }
                 return ""
             })

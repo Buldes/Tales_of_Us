@@ -421,6 +421,7 @@
   opacity: 0;
   
   margin-top: 10px;
+  margin-bottom: 20px;
   width: calc(100% - 60px);
 
   display: flex;
@@ -549,4 +550,57 @@
 
   border-radius: 0px;
   width: 100%;
+}
+
+/*comparison*/
+.comparison{
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  height: 200px;
+  margin-bottom: 20px;
+
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.comparison button{
+  position: absolute;
+  z-index: 4;
+
+  top: calc(50% - 12.5px);
+  left: calc(50% - 12.5px);
+
+  border-radius: 100%;
+  border: 0px;
+  width: 25px;
+  height: 25px;
+}
+
+.comparison img{
+  position: absolute;
+  width: calc(100vw - 100px);
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.comparisonimgpPio{
+  position: absolute;
+  overflow: hidden;
+
+  width: 50%;
+  height: 100%;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  border-right: 3px solid white;
+
+  z-index: 3;
+}
+.comparisonimgpPio img{
+  position: absolute;
+  height: auto;
+  width: calc(100vw - 100px);
 }

@@ -33,7 +33,6 @@ export class Collection extends Component {
         setTimeout(() => {
             this.setState({ pic: newPic });
             this.collectionRef.current.style.opacity = 1;
-            //this.collectionRef.current.style.height = document.getElementById(`pic${newPic + 1}${this.props.idnum}`).naturalHeight
         }, 250);
 
         setTimeout(() => this.setState({ allowChange: true }), 500);
