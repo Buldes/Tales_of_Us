@@ -1,8 +1,13 @@
 {
   "files": {
     "main.css": "/Tales_of_Us/static/css/main.dfa82601.css",
-    "main.js": "/Tales_of_Us/static/js/main.74f05f57.js",
+    "main.js": "/Tales_of_Us/static/js/main.8d87986b.js",
     "static/js/453.d7061878.chunk.js": "/Tales_of_Us/static/js/453.d7061878.chunk.js",
+    "static/media/Monat3anhänger.jpg": "/Tales_of_Us/static/media/Monat3anhänger.1b9157786ca855058c92.jpg",
+    "static/media/WeinachtsGeschenk-2024-1.jpg": "/Tales_of_Us/static/media/WeinachtsGeschenk-2024-1.dd5b0313ed5774e03b63.jpg",
+    "static/media/Weinachtsgeschenk-2024-3.jpg": "/Tales_of_Us/static/media/Weinachtsgeschenk-2024-3.be3491b7bcd47c0d6bf0.jpg",
+    "static/media/WeinachtsGeschenk-2024-2.jpg": "/Tales_of_Us/static/media/WeinachtsGeschenk-2024-2.41d67e6e6cbc09756e16.jpg",
+    "static/media/Weinachten2024-1.jpg": "/Tales_of_Us/static/media/Weinachten2024-1.1e9e123ebc45013635f3.jpg",
     "static/media/feuerZelten.jpg": "/Tales_of_Us/static/media/feuerZelten.ad794300ab441bddd01d.jpg",
     "static/media/Monat2Pizza.jpg": "/Tales_of_Us/static/media/Monat2Pizza.637b7a4b8cefb9ce2d88.jpg",
     "static/media/muschelKette.jpg": "/Tales_of_Us/static/media/muschelKette.323049269a24ae84bf3b.jpg",
@@ -12,18 +17,20 @@
     "static/media/Kirmes2024.jpg": "/Tales_of_Us/static/media/Kirmes2024.2f9650c2293524d82306.jpg",
     "static/media/firstDateAsking.jpg": "/Tales_of_Us/static/media/firstDateAsking.11a39213554498e7977e.jpg",
     "static/media/LEDTafel.jpg": "/Tales_of_Us/static/media/LEDTafel.1c0609675b4228129f9a.jpg",
+    "static/media/Weinachten2024-2.jpg": "/Tales_of_Us/static/media/Weinachten2024-2.c6f1c6a5b707695afde5.jpg",
     "static/media/Monat3Blumen.jpg": "/Tales_of_Us/static/media/Monat3Blumen.883071430d6f4c4dcb8e.jpg",
+    "static/media/Weinchtane2024-3.jpg": "/Tales_of_Us/static/media/Weinchtane2024-3.7d62ee68249e7dae75e8.jpg",
     "static/media/placeholder.png": "/Tales_of_Us/static/media/placeholder.84a0e23ce5999b372f26.png",
     "static/media/firstMesssage.png": "/Tales_of_Us/static/media/firstMesssage.7c81de892de6dbe4857b.png",
     "static/media/Monat2HarryPotter.jpg": "/Tales_of_Us/static/media/Monat2HarryPotter.15ddbe01d36bf2bc45dc.jpg",
     "static/media/sebbFeier.jpg": "/Tales_of_Us/static/media/sebbFeier.a9abfbcbb7e24533c2a8.jpg",
     "index.html": "/Tales_of_Us/index.html",
     "main.dfa82601.css.map": "/Tales_of_Us/static/css/main.dfa82601.css.map",
-    "main.74f05f57.js.map": "/Tales_of_Us/static/js/main.74f05f57.js.map",
+    "main.8d87986b.js.map": "/Tales_of_Us/static/js/main.8d87986b.js.map",
     "453.d7061878.chunk.js.map": "/Tales_of_Us/static/js/453.d7061878.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dfa82601.css",
-    "static/js/main.74f05f57.js"
+    "static/js/main.8d87986b.js"
   ]
 }
